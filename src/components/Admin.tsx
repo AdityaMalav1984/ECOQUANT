@@ -27,17 +27,17 @@ export default function Admin() {
         <p className="text-eq-sec text-[0.9rem] mt-1">Review and approve business sustainability certifications.</p>
       </div>
 
-      <div className="flex gap-4 mb-7">
-        <div className="bg-eq-card border border-eq-border rounded-3xl flex-1 p-5 text-center shadow-sm">
-          <div className="font-display text-[1.8rem] font-bold text-[#f59e0b] leading-none">{pendingCount}</div>
+      <div className="grid grid-cols-3 gap-3 mb-7">
+        <div className="bg-eq-card border border-eq-border rounded-2xl md:rounded-3xl p-4 md:p-5 text-center shadow-sm">
+          <div className="font-display text-[1.4rem] md:text-[1.8rem] font-bold text-[#f59e0b] leading-none">{pendingCount}</div>
           <div className="text-[0.78rem] text-eq-sec mt-1">Pending</div>
         </div>
-        <div className="bg-eq-card border border-eq-border rounded-3xl flex-1 p-5 text-center shadow-sm">
-          <div className="font-display text-[1.8rem] font-bold text-eq-accent leading-none">{approvedCount}</div>
+        <div className="bg-eq-card border border-eq-border rounded-2xl md:rounded-3xl p-4 md:p-5 text-center shadow-sm">
+          <div className="font-display text-[1.4rem] md:text-[1.8rem] font-bold text-eq-accent leading-none">{approvedCount}</div>
           <div className="text-[0.78rem] text-eq-sec mt-1">Approved</div>
         </div>
-        <div className="bg-eq-card border border-eq-border rounded-3xl flex-1 p-5 text-center shadow-sm">
-          <div className="font-display text-[1.8rem] font-bold text-eq-data leading-none">{businesses.length}</div>
+        <div className="bg-eq-card border border-eq-border rounded-2xl md:rounded-3xl p-4 md:p-5 text-center shadow-sm">
+          <div className="font-display text-[1.4rem] md:text-[1.8rem] font-bold text-eq-data leading-none">{businesses.length}</div>
           <div className="text-[0.78rem] text-eq-sec mt-1">Total</div>
         </div>
       </div>
@@ -134,9 +134,9 @@ export default function Admin() {
       </div>
 
       {/* Toast */}
-      <div className={`fixed bottom-8 right-8 bg-eq-card border border-eq-accent text-eq-text px-5 py-3.5 rounded-xl text-[0.88rem] font-semibold z-[999] flex items-center gap-2.5 transition-all duration-300 shadow-lg ${toastMsg ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'}`}>
-        <span className="text-[1.1rem]">✅</span>
-        {toastMsg.replace('✅', '').trim()}
+      <div className={`fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-eq-card border border-eq-accent text-eq-text px-4 py-3 md:px-5 md:py-3.5 rounded-xl text-[0.8rem] md:text-[0.88rem] font-semibold z-[999] flex items-center gap-2.5 transition-all duration-300 shadow-lg ${toastMsg ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'}`}>
+        <span className="text-[1rem] md:text-[1.1rem]">✅</span>
+        <span className="hidden md:inline">{toastMsg.replace('✅', '').trim()}</span>
       </div>
     </div>
   );

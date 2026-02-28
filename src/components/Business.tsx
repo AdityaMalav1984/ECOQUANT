@@ -157,9 +157,9 @@ export default function Business() {
       </div>
 
       {/* Toast */}
-      <div className={`fixed bottom-8 right-8 bg-eq-card border border-eq-accent text-eq-text px-5 py-3.5 rounded-xl text-[0.88rem] font-semibold z-[999] flex items-center gap-2.5 transition-all duration-300 shadow-lg ${showToast ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'}`}>
-        <span className="text-[1.1rem]">✅</span>
-        Score {score} submitted for certification!
+      <div className={`fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-eq-card border border-eq-accent text-eq-text px-4 py-3 md:px-5 md:py-3.5 rounded-xl text-[0.8rem] md:text-[0.88rem] font-semibold z-[999] flex items-center gap-2.5 transition-all duration-300 shadow-lg ${showToast ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'}`}>
+        <span className="text-[1rem] md:text-[1.1rem]">✅</span>
+        <span className="hidden md:inline">Score {score} submitted for certification!</span>
       </div>
     </div>
   );

@@ -113,9 +113,9 @@ export default function Customer() {
         <p className="text-eq-sec text-[0.9rem] mt-1">Your eco-loyalty dashboard.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-[380px_1fr] gap-7 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-7 items-start">
         {/* Phone Mockup */}
-        <div className="mx-auto w-full max-w-[380px] bg-eq-card border border-eq-border rounded-[40px] p-8 relative shadow-sm">
+        <div className="mx-auto w-full max-w-[380px] bg-eq-card border border-eq-border rounded-[40px] p-5 md:p-8 relative shadow-sm">
           <div className="bg-[linear-gradient(135deg,#0B2A36_0%,#0F3A2E_60%,#123B2F_100%)] border border-eq-border rounded-[20px] p-7 text-center mb-6 relative overflow-hidden shadow-inner">
             <div className="absolute -top-7 -right-7 w-[120px] h-[120px] bg-eq-accent/10 rounded-full"></div>
             <div className="text-[0.75rem] uppercase tracking-[2px] text-eq-sec mb-1.5 relative z-10">Your Balance</div>
@@ -264,9 +264,9 @@ export default function Customer() {
       )}
 
       {/* Toast */}
-      <div className={`fixed bottom-8 right-8 bg-eq-card border border-eq-accent text-eq-text px-5 py-3.5 rounded-xl text-[0.88rem] font-semibold z-[999] flex items-center gap-2.5 transition-all duration-300 shadow-lg ${toastMsg ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'}`}>
-        <span className="text-[1.1rem]">{toastMsg.includes('⚠️') ? '⚠️' : toastMsg.includes('🎁') ? '🎁' : '✅'}</span>
-        {toastMsg.replace(/[✅⚠️🎁🌿]/g, '').trim()}
+      <div className={`fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-eq-card border border-eq-accent text-eq-text px-4 py-3 md:px-5 md:py-3.5 rounded-xl text-[0.8rem] md:text-[0.88rem] font-semibold z-[999] flex items-center gap-2.5 transition-all duration-300 shadow-lg ${toastMsg ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5 pointer-events-none'}`}>
+        <span className="text-[1rem] md:text-[1.1rem]">{toastMsg.includes('⚠️') ? '⚠️' : toastMsg.includes('🎁') ? '🎁' : '✅'}</span>
+        <span className="hidden md:inline">{toastMsg.replace(/[✅⚠️🎁🌿]/g, '').trim()}</span>
       </div>
     </div>
   );
